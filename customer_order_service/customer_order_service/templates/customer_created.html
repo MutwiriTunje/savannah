@@ -1,0 +1,17 @@
+<!-- templates/customer_created.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Created</title>
+</head>
+<body>
+    <h1>Customer successfully created!</h1>
+    <p>Welcome aboard! Your new customer has been added.</p>
+
+    <!-- Add the CTA -->
+    <p>What would you like to do next? <a href="{% url 'create-order' %}">Create an Order</a></p>
+    <!-- Replace 'create-order' with your actual order creation URL name -->
+</body>
+</html>
