@@ -1,9 +1,10 @@
 from django.db import models
+from .validators import validate_phone_number
 
 class Customer(models.Model):
     name = models.CharField(max_length=100)
     code = models.CharField(max_length=20)
-    phone_number = models.CharField(max_length=15)
+    phone_number = models.CharField(max_length=15, validators=[validate_phone_number])
     
 
     def __str__(self):
