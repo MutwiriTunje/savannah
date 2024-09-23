@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-trm5#_)$_iq8uw^hq-s_p#)-syq$2s82ud@(io$pbjweb@934h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://localhost:8000/callback', '127.0.0.1' ]
+ALLOWED_HOSTS = ['http://localhost:8000/callback', '127.0.0.1', 'savannah-cil5.onrender.com' ]
 
 
 # Application definition
