@@ -65,7 +65,7 @@ class OrderViewSet(viewsets.ModelViewSet):
         # Construct the SMS message
         message = f"Thank you {customer_name} for your order of {ordered_item}!"
 
-        # Now call your send_sms_instance to send the SMS
+        # calling send_sms_instance to send the SMS
         send_sms_instance = send_sms()
         send_sms_instance.send(phone_number=phone_number, message=message,)
 
@@ -81,7 +81,7 @@ class send_sms:
 
         africastalking.initialize(username, api_key)
 
-        # Set your recipients (including the customer's phone number)
+        # Set your recipients and sender
         recipients = [phone_number]
         sender = "myShopKe"
 

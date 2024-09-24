@@ -9,7 +9,7 @@ class CustomerModelTest(TestCase):
             phone_number='1234567890',
         )
         self.assertEqual(str(customer), 'Morara Kebaso')
-        # Add more assertions for other fields as needed
+       
 
 class OrderModelTest(TestCase):
     def setUp(self):
@@ -31,4 +31,4 @@ class OrderModelTest(TestCase):
             str(self.order),
             f"Order for {self.customer}: The Constitution"
         )
-        # Add more assertions for other fields as needed
+      
