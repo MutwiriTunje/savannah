@@ -1,9 +1,6 @@
-from django.shortcuts import render
 from rest_framework import viewsets, status
 from .models import Customer, Order
 from .serializer import CustomerSerializer, OrderSerializer
-from django.http import HttpResponseRedirect
-from django.urls import reverse
 import africastalking
 from django.conf import settings
 from rest_framework.response import Response
@@ -27,11 +24,11 @@ class CustomerViewSet(viewsets.ModelViewSet):
         
 
     def update(self, request, *args, **kwargs):
-        # custom logic for updating a customer
+        
         return super().update(request, *args, **kwargs)
 
     def destroy(self, request, *args, **kwargs):
-        # custom logic for deleting a customer
+        
         return super().destroy(request, *args, **kwargs)
 
 
@@ -42,8 +39,7 @@ class CustomerCreatedView(TemplateView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # Add any additional context data you want to pass to the template
-        # For example:
+    
         context['confirmation_message'] = "Customer has been successfully created!"
         return context
 
