@@ -18,7 +18,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12'  
+          python-version: '3.12'
 
       - name: Install dependencies
         run: |
@@ -27,7 +27,8 @@ jobs:
 
       - name: Run Django tests
         run: |
-          python manage.py test  # Your Django test command
+          python manage.py test
+
 
   deploy:
     if: success()  # Only run if tests pass
