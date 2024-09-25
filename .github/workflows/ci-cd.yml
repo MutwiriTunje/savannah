@@ -18,7 +18,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12'
+          python-version: '3.x'
 
       - name: Install dependencies
         run: |
@@ -27,8 +27,8 @@ jobs:
 
       - name: Run Django tests
         run: |
-          python manage.py test
-
+          cd customer_service_order  # Navigate to the directory containing manage.py
+          python manage.py test  # Now run the tests
 
   deploy:
     if: success()  # Only run if tests pass
