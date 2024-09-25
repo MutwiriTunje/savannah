@@ -23,12 +23,13 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          pip install -r savannah/customer_service_order/requirements.txt  # Adjust path to requirements.txt if necessary
 
       - name: Run Django tests
         run: |
-          cd customer_service_order  # Navigate to the directory containing manage.py
-          python manage.py test  # Now run the tests
+          cd savannah/customer_service_order  # Navigate to the directory containing manage.py
+          python manage.py test  # Run the tests
+
 
   deploy:
     if: success()  # Only run if tests pass
