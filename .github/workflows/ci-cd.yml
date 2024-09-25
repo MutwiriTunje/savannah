@@ -23,11 +23,11 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r savannah/customer_service_order/requirements.txt  # Ensure this path is correct
+          pip install -r savannah/customer_order_service/requirements.txt  # Ensure this path is correct
 
       - name: Run Django tests
         run: |
-          cd savannah/customer_service_order  # Navigate to the directory containing manage.py
+          cd savannah/customer_order_service  # Navigate to the directory containing manage.py
           python manage.py test  # Run the tests
 
   deploy:
