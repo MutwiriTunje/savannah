@@ -70,7 +70,19 @@ class OrderViewSet(viewsets.ModelViewSet):
         send_sms_instance.send(phone_number=phone_number, message=message,)
 
         headers = self.get_success_headers(serializer.data)
-        return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+        # return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+        return redirect('order-success')
+    
+
+class OrderSuccessView(TemplateView):
+    template_name = 'order_success.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+    
+        context['confirmation_message'] = "Order has been successfully made!"
+        return context
+    
 
 
 

@@ -124,7 +124,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+# settings.py
+
+# Define the URL that handles the static files (CSS, JavaScript, images)
+STATIC_URL = '/static/'
+
+# Define the directories where Django will search for additional static files
+STATICFILES_DIRS = [
+    BASE_DIR / 'authentication/static',  # Path to your static directory
+]
+
+# This is where static files will be collected when running 'collectstatic'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
